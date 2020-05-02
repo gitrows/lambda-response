@@ -1,0 +1,27 @@
+{
+  "name": "lambda-response",
+  "version": "0.0.1",
+  "description": "Wraps an AWS Lambda function response object for consistency and convenience",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitrows/lambda-response.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "response"
+  ],
+  "author": "Nicolas Zimmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitrows/lambda-response/issues"
+  },
+  "homepage": "https://github.com/gitrows/lambda-response#readme"
+}
