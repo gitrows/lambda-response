@@ -1,10 +1,10 @@
 const description=require('./lib/descriptions.js');
 
-exports.response = (code,payload,headers={})=>{
+module.exports = (code,payload,headers={},base64=false)=>{
 	let response={
 		"statusCode": code,
 		"statusDescription": description[code],
-		"isBase64Encoded": false,
+		"isBase64Encoded": base64,
 		"headers":headers
 	};
 	response.headers['Access-Control-Allow-Origin'] = '*';
