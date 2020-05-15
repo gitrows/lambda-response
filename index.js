@@ -13,12 +13,10 @@ module.exports = (code,payload,headers={},base64=false)=>{
 			"message": description[code],
 			"documentation_url":'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/'+code
 		}
-	if (typeof payload=='object'){
+	if (typeof payload=='object')
 		payload=JSON.stringify(payload);
-		response.headers['Content-Type']="application/json"
-	} else {
-		response.headers['Content-Type']="text/html; charset=UTF-8"
-	}
+
+	response.headers['Content-Type']="application/json"
 	response.body=payload;
 	return response;
 }
