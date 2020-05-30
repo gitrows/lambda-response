@@ -17,7 +17,7 @@ module.exports = (code,payload,headers={},isBase64Encoded=false)=>{
 				"url":'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/'+code
 			}]
 		};
-	if (code==400){
+	if (code==400&&payload.documentation){
 		payload.documentation.push({description:"GitRows API Documentation","url":"https://gitrows.com/docs/api/path"})
 	}
 	if (typeof payload=='object')
