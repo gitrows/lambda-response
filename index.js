@@ -7,7 +7,7 @@ module.exports = (code,payload,headers={},isBase64Encoded=false)=>{
 		"isBase64Encoded": isBase64Encoded,
 		"headers":headers
 	};
-	response.headers['Access-Control-Allow-Origin'] = '*';
+	response.headers['Access-Control-Allow-Origin']=response.headers['Access-Control-Allow-Origin']|| '*';
 	if (typeof payload=='undefined')
 		payload={
 			"code": code,
