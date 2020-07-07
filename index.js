@@ -8,6 +8,8 @@ module.exports = (code,payload,headers={},isBase64Encoded=false)=>{
 		"headers":headers
 	};
 	response.headers['Access-Control-Allow-Origin']=response.headers['Access-Control-Allow-Origin']|| '*';
+	response.headers['Content-Type']=response.headers['Content-Type']||"application/json";
+
 	if (typeof payload=='undefined')
 		payload={
 			"code": code,
@@ -22,8 +24,7 @@ module.exports = (code,payload,headers={},isBase64Encoded=false)=>{
 	}
 	if (typeof payload=='object')
 		payload=JSON.stringify(payload);
-
-	response.headers['Content-Type']="application/json"
+		
 	response.body=payload;
 	return response;
 }
