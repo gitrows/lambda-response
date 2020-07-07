@@ -1,6 +1,6 @@
 {
   "name": "@gitrows/lambda-response",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Wraps an AWS Lambda function response object for consistency and convenience",
   "main": "index.js",
   "directories": {
