@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://unpkg.com/mvp.css">
+<style>
+	:root {
+	  --color-success: #28a745;
+		--color-error: #d73a49;
+		--hover-brightness: 1;
+	}
+	svg{
+		fill:currentColor;
+	}
+	svg.success{
+		fill:var(--color-success);
+	}
+	svg.error{
+		fill:var(--color-error);
+	}
+	a b, a em, a i, a strong, button {
+		padding: 1rem 1.5rem;
+	}
+	a img{
+		filter: grayscale(1);
+	}
+	a:hover img{
+		filter: grayscale(0);
+	}
+	img.logo{
+		height: 15px;
+		vertical-align: text-bottom;
+		margin-left: 5px;
+	}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{=it.statusCode}}</title>
+<header>
+	<h1>{{=it.statusCode}}</h1>
+	<p>{{=it.statusDescription}}</p>
+</header>
+<main>
+	{{? it.referer}}
+	<section><a href="{{=it.referer}}"><strong>Back to {{=it.origin}}</strong></a></section>
+	{{?}}
+</main>
+<footer>
+	<section>
+		<small>Made with
+			<a href="https://gitrows.com" target="_blank">
+				<img src="https://www.gitrows.com/assets/img/GitRows%20LogoType.svg" class="logo">
+			</a>
+		</small>
+	<section>
+</footer>

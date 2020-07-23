@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://unpkg.com/mvp.css">
+<style>
+	:root {
+	  --color-success: #28a745;
+		--color-error: #d73a49;
+		--hover-brightness: 1;
+	}
+	svg{
+		fill:currentColor;
+	}
+	svg.success{
+		fill:var(--color-success);
+	}
+	svg.error{
+		fill:var(--color-error);
+	}
+	a b, a em, a i, a strong, button {
+		padding: 1rem 1.5rem;
+	}
+	a img{
+		filter: grayscale(1);
+	}
+	a:hover img{
+		filter: grayscale(0);
+	}
+	img.logo{
+		height: 15px;
+		vertical-align: text-bottom;
+		margin-left: 5px;
+	}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{=it.title}}</title>
+<header>
+	{{? !it.success }}
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" class="error"><path d="M13 17.5a1 1 0 11-2 0 1 1 0 012 0zm-.25-8.25a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z"></path><path fill-rule="evenodd" d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752L9.836 3.244zm3.03.751a1 1 0 00-1.732 0L2.168 19.499A1 1 0 003.034 21h17.932a1 1 0 00.866-1.5L12.866 3.994z"></path></svg>
+	{{?? true }}
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" class="success"><path d="M17.28 9.28a.75.75 0 00-1.06-1.06l-5.97 5.97-2.47-2.47a.75.75 0 00-1.06 1.06l3 3a.75.75 0 001.06 0l6.5-6.5z"></path><path fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"></path></svg>
+	{{?}}
+	<h1>{{=it.title}}</h1>
+	<p>{{=it.message}}</p>
+</header>
+<main>
+	<section><a href="{{=it.referer}}"><strong>Back to {{=it.origin}}</strong></a></section>
+</main>
+<footer>
+	<section>
+		<small>Made with
+			<a href="https://gitrows.com" target="_blank">
+				<img src="https://www.gitrows.com/assets/img/GitRows%20LogoType.svg" class="logo">
+			</a>
+		</small>
+	<section>
+</footer>

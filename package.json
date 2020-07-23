@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/gitrows/lambda-response/issues"
   },
-  "homepage": "https://github.com/gitrows/lambda-response#readme"
+  "homepage": "https://github.com/gitrows/lambda-response#readme",
+  "dependencies": {
+    "dot": "^1.1.3"
+  }
 }
