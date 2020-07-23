@@ -13,7 +13,7 @@ module.exports = (code,payload,headers={},isBase64Encoded=false,options={})=>{
 	switch (options.format) {
 
 		case 'html':
-			let templates=require("dot").process({ path: "./views"});
+			let templates=require("dot").process({ path: __dirname+"/views"});
 			response.headers['Content-Type']="text/html";
 			response.statusCode=200;
 			response.body=templates[options.template||'index']({...response,...options});
