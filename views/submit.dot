@@ -50,8 +50,8 @@
 	<section>
 		<small>Made with
 			<a href="https://gitrows.com" target="_blank">
-				<img src="https://www.gitrows.com/assets/img/GitRows%20LogoType.svg" class="logo">
+				<img src="https://www.gitrows.com/assets/img/GitRows%20LogoType.svg" class="logo" alt="Visit GitRows">
 			</a>
 		</small>
-	<section>
+	</section>
 </footer>
